@@ -33,7 +33,7 @@ def main():
         k_x = 0
         k_y = 0
         pg.display.update()
-        kk_rct.move_ip(-1, 0)
+
         if key_lst[pg.K_UP]:
             k_y -= 1
         if key_lst[pg.K_DOWN]:
@@ -42,7 +42,7 @@ def main():
             k_x -= 1
         if key_lst[pg.K_RIGHT]:
             k_x += 2
-        kk_rct.move_ip(k_x, k_y)
+        kk_rct.move_ip(k_x-1, k_y)
         tmr += 1
         
             
