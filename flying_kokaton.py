@@ -47,7 +47,7 @@ def main():
         
             
                
-        clock.tick(600)
+        clock.tick(200)
         
 
 
