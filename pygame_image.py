@@ -30,17 +30,19 @@ def main():
         screen.blit(bg_img_f, [x + 4800, 0])
         #screen.blit(kk_img,[300, 200])
         screen.blit(kk_img, kk_rct)
+        k_x = 0
+        k_y = 0
         pg.display.update()
         kk_rct.move_ip(-1, 0)
         if key_lst[pg.K_UP]:
-            kk_rct.move_ip(0,-1)
+            k_y -= 1
         if key_lst[pg.K_DOWN]:
-            kk_rct.move_ip(0, +1)
+            k_y += 1
         if key_lst[pg.K_LEFT]:
-            kk_rct.move_ip(-1, 0)
+            k_x -= 1
         if key_lst[pg.K_RIGHT]:
-            kk_rct.move_ip(+2, 0)
-        
+            k_x += 2
+        kk_rct.move_ip(k_x, k_y)
         tmr += 1
         
             
